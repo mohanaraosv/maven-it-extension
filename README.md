@@ -23,7 +23,8 @@
 [![Site](https://github.com/khmarbaise/maven-it-extension/workflows/SitePublishing/badge.svg)][published-site]
 [![Issues](https://img.shields.io/github/issues/khmarbaise/maven-it-extension)](https://github.com/khmarbaise/maven-it-extension/issues)
 [![Issues Closed](https://img.shields.io/github/issues-closed/khmarbaise/maven-it-extension)](https://github.com/khmarbaise/maven-it-extension/issues?q=is%3Aissue+is%3Aclosed)
- 
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/khmarbaise/maven-it-extension.svg)](https://isitmaintained.com/project/khmarbaise/maven-it-extension "Average time to resolve an issue")
+
 <!---
  -green will be done for 1.0.0 the first time.
  -orange used for SNAPSHOT
