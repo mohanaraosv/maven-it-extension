@@ -30,12 +30,12 @@
  -green will be done for 1.0.0 the first time.
  -orange used for SNAPSHOT
 -->
-| Release        | Maven Central                                       | Release Notes                                                     |                           Users Guide                          | JavaDoc | Type    | 
-| -------------- | --------------------------------------------------- | ----------------------------------------------------------------: | -------------------------------------------------------------: | ------- | ------- |
-| 0.6.0          | [![Maven Central][shield-central]][central-search]  | [![PDF][stable-pdf-releasenotes]][releasenotes-pdf]               | [![PDF][stable-pdf-usersguide]][usersguide-pdf]                | [![javadoc](https://javadoc.io/badge2/com.soebes.itf.jupiter.extension/itf-maven-plugin/javadoc.svg)](https://javadoc.io/doc/com.soebes.itf.jupiter.extension/itf-maven-plugin)  | PDF     |
-|                |                                                     | [![HTML][stable-html-release]][releasenotes-html]                 | [![HTML][stable-html-usersgude]][usersguide-html]              |         | HTML    |
-| 0.7.0-SNAPSHOT | ![Maven Central][not-available-in-central]          | [![PDF][unstable-pdf-releasenotes]][unstable-releasenotes-pdf]    | [![PDF][unstable-pdf-usersguide]][unstable-usersguide-pdf]     |         | PDF     |
-|                |                                                     | [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |         | HTML    |
+| Release        | Maven Central                                       || Release Notes                                                     |                           Users Guide                          | JavaDoc | Type    | 
+| -------------- | --------------------------------------------------- || ----------------------------------------------------------------: | -------------------------------------------------------------: | ------- | ------- |
+| 0.6.0          | [![Maven Central][shield-central]][central-search]  || [![PDF][stable-pdf-releasenotes]][releasenotes-pdf]               | [![PDF][stable-pdf-usersguide]][usersguide-pdf]                | [![javadoc](https://javadoc.io/badge2/com.soebes.itf.jupiter.extension/itf-maven-plugin/javadoc.svg)](https://javadoc.io/doc/com.soebes.itf.jupiter.extension/itf-maven-plugin)  | PDF     |
+|                |                                                     || [![HTML][stable-html-release]][releasenotes-html]                 | [![HTML][stable-html-usersgude]][usersguide-html]              |         | HTML    |
+| 0.7.0-SNAPSHOT | ![Maven Central][not-available-in-central]          || [![PDF][unstable-pdf-releasenotes]][unstable-releasenotes-pdf]    | [![PDF][unstable-pdf-usersguide]][unstable-usersguide-pdf]     |         | PDF     |
+|                |                                                     || [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |         | HTML    |
 
 
 # State
