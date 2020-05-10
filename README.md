@@ -24,6 +24,8 @@
 [![Issues Closed](https://img.shields.io/github/issues-closed/khmarbaise/maven-it-extension)](https://github.com/khmarbaise/maven-it-extension/issues?q=is%3Aissue+is%3Aclosed)
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/khmarbaise/maven-it-extension.svg)](https://isitmaintained.com/project/khmarbaise/maven-it-extension "Average time to resolve an issue")
 
+[![SemVer stability](https://api.dependabot.com/badges/compatibility_score?dependency-name=com.soebes.itf.jupiter.extension:itf-extension&package-manager=maven&version-scheme=semver)](https://dependabot.com/compatibility-score/?dependency-name=com.soebes.itf.jupiter.extension:itf-extension&package-manager=maven&version-scheme=semver)
+
 <!---
  -green will be done for 1.0.0 the first time.
  -orange used for SNAPSHOT
