@@ -17,7 +17,7 @@
 # Integration Testing Framework Extension
 
 [![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/apache/maven.svg?label=License)][license]
-[![javadoc](https://javadoc.io/badge2/com.soebes.itf.jupiter.extension/itf-maven-plugin/javadoc.svg)](https://javadoc.io/doc/com.soebes.itf.jupiter.extension/itf-maven-plugin)
+
 [![JDKBuilds](https://github.com/khmarbaise/maven-it-extension/workflows/JDKBuilds/badge.svg)][jdkbuilds]
 [![Main](https://github.com/khmarbaise/maven-it-extension/workflows/Main/badge.svg)][mainbuilds]
 [![Site](https://github.com/khmarbaise/maven-it-extension/workflows/SitePublishing/badge.svg)][published-site]
@@ -29,12 +29,12 @@
  -green will be done for 1.0.0 the first time.
  -orange used for SNAPSHOT
 -->
-| Release        | Maven Central                                       | Release Notes                                                     |                           Users Guide                          |
-| -------------- | --------------------------------------------------- | ----------------------------------------------------------------: | -------------------------------------------------------------: |
-| 0.6.0          | [![Maven Central][shield-central]][central-search]  | [![PDF][stable-pdf-releasenotes]][releasenotes-pdf]               | [![PDF][stable-pdf-usersguide]][usersguide-pdf]                |
-|                |                                                     | [![HTML][stable-html-release]][releasenotes-html]                 | [![HTML][stable-html-usersgude]][usersguide-html]              |
-| 0.7.0-SNAPSHOT | ![Maven Central][not-available-in-central]          | [![PDF][unstable-pdf-releasenotes]][unstable-releasenotes-pdf]    | [![PDF][unstable-pdf-usersguide]][unstable-usersguide-pdf]     |
-|                |                                                     | [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |
+| Release        | Maven Central                                       | Release Notes                                                     |                           Users Guide                          | JavaDoc | Type    | 
+| -------------- | --------------------------------------------------- | ----------------------------------------------------------------: | -------------------------------------------------------------: | ------- | ------- |
+| 0.6.0          | [![Maven Central][shield-central]][central-search]  | [![PDF][stable-pdf-releasenotes]][releasenotes-pdf]               | [![PDF][stable-pdf-usersguide]][usersguide-pdf]                | [![javadoc](https://javadoc.io/badge2/com.soebes.itf.jupiter.extension/itf-maven-plugin/javadoc.svg)](https://javadoc.io/doc/com.soebes.itf.jupiter.extension/itf-maven-plugin)  | PDF     |
+|                |                                                     | [![HTML][stable-html-release]][releasenotes-html]                 | [![HTML][stable-html-usersgude]][usersguide-html]              |         | HTML    |
+| 0.7.0-SNAPSHOT | ![Maven Central][not-available-in-central]          | [![PDF][unstable-pdf-releasenotes]][unstable-releasenotes-pdf]    | [![PDF][unstable-pdf-usersguide]][unstable-usersguide-pdf]     |         | PDF     |
+|                |                                                     | [![HTML][unstable-html-releasenotes]][unstable-releasenotes-html] | [![HTML][unstable-html-usersguide]][unstable-usersguide-html]  |         | HTML    |
 
 
 # State
@@ -331,15 +331,15 @@ The background guide is a conclusion about the reason I had to start this projec
 [unstable-releasenotes-html]: https://khmarbaise.github.io/maven-it-extension/snapshot/itf-documentation/usersguide/release-notes/release-notes.html
 [unstable-releasenotes-pdf]: https://khmarbaise.github.io/maven-it-extension/snapshot/itf-documentation/usersguide/release-notes/release-notes.pdf
 
-[stable-html-release]: https://img.shields.io/badge/0.6.0-HTML--Releasenotes-green
-[stable-html-usersgude]: https://img.shields.io/badge/0.6.0-HTML--Usersguide-green
-[stable-pdf-releasenotes]: https://img.shields.io/badge/0.6.0-PDF--Releasenotes-green
-[stable-pdf-usersguide]: https://img.shields.io/badge/0.6.0-PDF--Usersguide-green
+[stable-html-release]: https://img.shields.io/badge/Releasenotes-green
+[stable-html-usersgude]: https://img.shields.io/badge/Usersguide-green
+[stable-pdf-releasenotes]: https://img.shields.io/badge/Releasenotes-green
+[stable-pdf-usersguide]: https://img.shields.io/badge/Usersguide-green
 
-[unstable-pdf-releasenotes]: https://img.shields.io/badge/0.7.0--SNAPSHOT-PDF--Releasenotes-orange
-[unstable-html-releasenotes]: https://img.shields.io/badge/0.7.0--SNAPSHOT-HTML--Releasenotes-orange
-[unstable-pdf-usersguide]: https://img.shields.io/badge/0.7.0--SNAPSHOT-PDF--Usersguide-orange
-[unstable-html-usersguide]: https://img.shields.io/badge/0.7.0--SNAPSHOT-HTML--Usersguide-orange
+[unstable-pdf-releasenotes]: https://img.shields.io/badge/Releasenotes-orange
+[unstable-html-releasenotes]: https://img.shields.io/badge/Releasenotes-orange
+[unstable-pdf-usersguide]: https://img.shields.io/badge/Usersguide-orange
+[unstable-html-usersguide]: https://img.shields.io/badge/Usersguide-orange
 
 [shield-central]: https://img.shields.io/maven-central/v/com.soebes.itf.jupiter.extension/itf-jupiter-extension.svg?label=Maven%20Central
 [central-search]: https://search.maven.org/search?q=g%3Acom.soebes.itf.jupiter.extension
