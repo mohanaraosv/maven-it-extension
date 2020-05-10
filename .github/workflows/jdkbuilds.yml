@@ -38,3 +38,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Test
         run: mvn -V --no-transfer-progress clean verify --fail-at-end
+      - name: 'CacheOutput'
+        shell: bash
+        run: mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout
