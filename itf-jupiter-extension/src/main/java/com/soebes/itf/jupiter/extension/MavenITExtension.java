@@ -148,23 +148,11 @@ class MavenITExtension implements BeforeEachCallback, ParameterResolver, BeforeT
 
     if (mavenProject.isPresent()) {
       if (!directoryResolverResult.getProjectDirectory().exists()) {
-        directoryResolverResult.getProjectDirectory().mkdirs();
-        directoryResolverResult.getCacheDirectory().mkdirs();
-
-        FileUtils.copyDirectory(directoryResolverResult.getSourceMavenProject(),
-            directoryResolverResult.getProjectDirectory());
-        FileUtils.copyDirectory(directoryResolverResult.getComponentUnderTestDirectory(),
-            directoryResolverResult.getCacheDirectory());
+        createProjectAndCache(directoryResolverResult);
       }
     } else {
       FileUtils.deleteQuietly(directoryResolverResult.getProjectDirectory());
-      directoryResolverResult.getProjectDirectory().mkdirs();
-      directoryResolverResult.getCacheDirectory().mkdirs();
-
-      FileUtils.copyDirectory(directoryResolverResult.getSourceMavenProject(),
-          directoryResolverResult.getProjectDirectory());
-      FileUtils.copyDirectory(directoryResolverResult.getComponentUnderTestDirectory(),
-          directoryResolverResult.getCacheDirectory());
+      createProjectAndCache(directoryResolverResult);
     }
 
     //Copy ".predefined-repo" into ".m2/repository"
@@ -186,9 +174,6 @@ class MavenITExtension implements BeforeEachCallback, ParameterResolver, BeforeT
     if (!mvnLocation.isPresent()) {
       throw new IllegalStateException("We could not find the maven executable `mvn` somewhere");
     }
-
-    ApplicationExecutor mavenExecutor = new ApplicationExecutor(directoryResolverResult.getProjectDirectory(),
-        integrationTestCaseDirectory, mvnLocation.get(), Collections.emptyList(), prefix);
 
     List<String> executionArguments = new ArrayList<>();
 
@@ -230,6 +215,8 @@ class MavenITExtension implements BeforeEachCallback, ParameterResolver, BeforeT
       executionArguments.add("package");
     }
 
+    ApplicationExecutor mavenExecutor = new ApplicationExecutor(directoryResolverResult.getProjectDirectory(),
+        integrationTestCaseDirectory, mvnLocation.get(), Collections.emptyList(), prefix);
 
     Process start = mavenExecutor.start(executionArguments);
 
@@ -251,6 +238,16 @@ class MavenITExtension implements BeforeEachCallback, ParameterResolver, BeforeT
         mavenProjectResult, mavenCacheResult);
 
     new StorageHelper(context).save(result, log, mavenCacheResult, mavenProjectResult);
+  }
+
+  private void createProjectAndCache(DirectoryResolverResult directoryResolverResult) throws IOException {
+    directoryResolverResult.getProjectDirectory().mkdirs();
+    directoryResolverResult.getCacheDirectory().mkdirs();
+
+    FileUtils.copyDirectory(directoryResolverResult.getSourceMavenProject(),
+        directoryResolverResult.getProjectDirectory());
+    FileUtils.copyDirectory(directoryResolverResult.getComponentUnderTestDirectory(),
+        directoryResolverResult.getCacheDirectory());
   }
 
   private Map<String, String> pomEntries(DirectoryResolverResult directoryResolverResult) {
