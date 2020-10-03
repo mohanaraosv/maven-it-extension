@@ -84,6 +84,26 @@
             </excludes>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <configuration>
+            <!--
+             ! We need to make sure that never jar files or alike
+             ! will be filtered in any way.
+            -->
+            <nonFilteredFileExtensions>
+              <nonFilteredFileExtension>jar</nonFilteredFileExtension>
+              <nonFilteredFileExtension>ear</nonFilteredFileExtension>
+              <nonFilteredFileExtension>war</nonFilteredFileExtension>
+              <nonFilteredFileExtension>zip</nonFilteredFileExtension>
+              <nonFilteredFileExtension>tar</nonFilteredFileExtension>
+              <nonFilteredFileExtension>tar.gz</nonFilteredFileExtension>
+              <nonFilteredFileExtension>tar.bz</nonFilteredFileExtension>
+              <nonFilteredFileExtension>tar.bz2</nonFilteredFileExtension>
+            </nonFilteredFileExtensions>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
     <!-- tag::resources[] -->
