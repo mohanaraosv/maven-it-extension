@@ -25,6 +25,9 @@ import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 import org.junit.jupiter.api.DisplayName;
 
+import java.io.IOException;
+import java.nio.file.Files;
+
 import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
@@ -32,8 +35,9 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 class ProfileOnClassIT {
 
   @MavenTest
-  void profile_1_2_3(MavenExecutionResult result) {
+  void profile_1_2_3(MavenExecutionResult result) throws IOException {
     assertThat(result)
+        .as("The Log does not contain what expected %s", Files.lines(result.getMavenLog().getStdout()))
         .isSuccessful()
         .out()
         .info()
