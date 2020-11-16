@@ -23,6 +23,9 @@ import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 import org.apiguardian.api.API;
 import org.assertj.core.api.AbstractAssert;
 
+import java.io.IOException;
+import java.nio.file.Files;
+
 import static org.apiguardian.api.API.Status.EXPERIMENTAL;
 
 /**
@@ -96,8 +99,13 @@ public class MavenExecutionResultAssert extends AbstractAssert<MavenExecutionRes
   public MavenExecutionResultAssert isSuccessful() {
     isNotNull();
     if (!this.actual.isSuccesful()) {
-      failWithMessage("The build was not successful but was <%s> with returnCode:<%s>", actual.getResult(),
-          actual.getReturnCode());
+      try {
+        failWithMessage("The build was not successful but was <%s> with returnCode:<%s> log: %s", actual.getResult(),
+            actual.getReturnCode(), Files.lines(actual.getMavenLog().getStdout()));
+      } catch (IOException e) {
+        // need to reconsider?
+        e.printStackTrace();
+      }
     }
     return myself;
   }
@@ -110,8 +118,12 @@ public class MavenExecutionResultAssert extends AbstractAssert<MavenExecutionRes
   public MavenExecutionResultAssert isFailure() {
     isNotNull();
     if (!this.actual.isFailure()) {
-      failWithMessage("The build should be not successful but was <%s> with returnCode:<%s>", actual.getResult(),
-          actual.getReturnCode());
+      try {
+        failWithMessage("The build should be not successful but was <%s> with returnCode:<%s> log: %s", actual.getResult(),
+            actual.getReturnCode(), Files.lines(actual.getMavenLog().getStdout()));
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
     }
     return myself;
   }
