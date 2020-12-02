@@ -38,26 +38,14 @@ import static java.util.stream.Collectors.toList;
 class ITWithBeforeEachMavenIT {
 
   @BeforeEach
+  //TODO: Inject also a directory which contains `project` ? (MavenProjectResult)
+  //TODO: testMethodProjectFolder should be made part of MavenProjectResult as well! => simplifies the following code
   void beforeEach(MavenProjectResult project) {
-    // Verzeichnisse prüfen, ob die da sind...
-    String base = this.getClass().getResource("/").getFile();
-    File xdirectory = new File(base, "com/soebes/itf/examples/ITWithBeforeEachMavenIT/the_first_test_case");
-    List<String> expectedElements = createElements(xdirectory);
+    File testMethodProjectFolder = new File(this.getClass().getResource("/").getFile(), "com/soebes/itf/examples/ITWithBeforeEachMavenIT/the_first_test_case");
+    List<String> expectedElements = createElements(testMethodProjectFolder);
 
-    expectedElements.forEach(s -> System.out.println("s = " + s));
-    System.out.println("* beforeEach of ITWithBeforeEachIT");
-    System.out.println("project = " + project.getBaseDir());
+    List<String> actualElements = createElements(new File(project.getBaseDir(), "project")); //HINT: "project" hard coded?
 
-    File projectDirectory = new File(project.getBaseDir(), "project");
-
-    MavenITAssertions.assertThat(projectDirectory)
-        .isDirectory();
-//        .isDirectoryContaining(s -> s.getName().equals("pom.xml")).hasSize(1);
-    MavenITAssertions.assertThat(projectDirectory).isDirectoryNotContaining(s -> s.isDirectory() && s.getName().equals("target"));
-
-    List<String> actualElements = createElements(projectDirectory);
-
-    actualElements.forEach(s -> System.out.println("actual:" + s));
     MavenITAssertions.assertThat(actualElements).containsExactlyInAnyOrderElementsOf(expectedElements);
   }
 
