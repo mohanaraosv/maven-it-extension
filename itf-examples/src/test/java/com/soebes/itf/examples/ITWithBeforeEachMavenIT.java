@@ -19,18 +19,19 @@ package com.soebes.itf.examples;
  * under the License.
  */
 
-import com.soebes.itf.jupiter.extension.BeforeEachMaven;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
+import com.soebes.itf.jupiter.maven.MavenProjectResult;
+import org.junit.jupiter.api.BeforeEach;
 
 @MavenJupiterExtension
 class ITWithBeforeEachMavenIT {
 
-  @BeforeEachMaven
-  void beforeEach() {
+  @BeforeEach
+  void beforeEach(MavenProjectResult project) {
     System.out.println("* beforeEach of ITWithBeforeEachIT");
-    //System.out.println("* result = " + executor);
+    System.out.println("project = " + project.getBaseDir());
   }
 
   @MavenTest

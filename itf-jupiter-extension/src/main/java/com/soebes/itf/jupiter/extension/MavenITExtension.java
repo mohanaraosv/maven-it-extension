@@ -88,7 +88,13 @@ class MavenITExtension implements BeforeEachCallback, ParameterResolver, BeforeT
     // should we delete that structure here? Maybe we should make this configurable.
     mavenItTestCaseBaseDirectory.mkdirs();
 
-    new StorageHelper(context).save(mavenItBaseDirectory, mavenItTestCaseBaseDirectory, DirectoryHelper.getTargetDir());
+    Method methodName = context.getTestMethod().orElseThrow(() -> new IllegalStateException("No method given"));
+
+    StorageHelper storageHelper = new StorageHelper(context);
+    storageHelper.save(mavenItBaseDirectory, mavenItTestCaseBaseDirectory, DirectoryHelper.getTargetDir());
+    File testBaseDir = new File(mavenItTestCaseBaseDirectory, methodName.getName());
+    MavenProjectResult mavenProjectResult = new MavenProjectResult(testBaseDir, new Model());// FIXME: Model should be done right.
+    storageHelper.put(ParameterType.ProjectResult + context.getUniqueId(), mavenProjectResult);
   }
 
   @Override
