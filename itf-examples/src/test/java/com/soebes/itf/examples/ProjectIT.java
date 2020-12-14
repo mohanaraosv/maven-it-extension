@@ -32,7 +32,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
  */
 @MavenJupiterExtension
 @MavenPredefinedRepository
-class ProjectIT {
+class ProjectIT implements DefaultOptionsSet {
 
   @MavenTest
   @MavenDebug

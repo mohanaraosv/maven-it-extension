@@ -31,7 +31,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 @MavenJupiterExtension
 @MavenProject("test_project_root")
 @TestMethodOrder(OrderAnnotation.class)
-class MavenProjectRootIT {
+class MavenProjectRootIT implements DefaultOptionsSet {
 
   @MavenTest
   @MavenGoal("clean")

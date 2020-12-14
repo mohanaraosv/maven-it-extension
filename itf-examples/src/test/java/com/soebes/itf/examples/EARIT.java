@@ -41,7 +41,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
  * @author Karl Heinz Marbaise
  */
 @MavenJupiterExtension
-class EARIT {
+class EARIT implements DefaultOptionsSet {
 
   @MavenTest
   void basic(MavenExecutionResult result) {

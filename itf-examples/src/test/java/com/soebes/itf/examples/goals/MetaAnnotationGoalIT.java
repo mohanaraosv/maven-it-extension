@@ -19,6 +19,7 @@ package com.soebes.itf.examples.goals;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
@@ -28,7 +29,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @GoalsCleanVerify
-class MetaAnnotationGoalIT {
+class MetaAnnotationGoalIT implements DefaultOptionsSet {
 
   @MavenTest
   @DisplayName("This will check the goals which are defined via the Meta annotation @GoalsCleanVerify")

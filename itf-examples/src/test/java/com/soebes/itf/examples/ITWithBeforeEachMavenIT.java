@@ -25,7 +25,7 @@ import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 
 @MavenJupiterExtension
-class ITWithBeforeEachMavenIT {
+class ITWithBeforeEachMavenIT implements DefaultOptionsSet {
 
   @BeforeEachMaven
   void beforeEach() {

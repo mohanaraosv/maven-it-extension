@@ -19,6 +19,7 @@ package com.soebes.itf.examples.options;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenCLIOptions;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenOption;
@@ -29,7 +30,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @MavenOption(MavenCLIOptions.DEBUG)
-class OptionsOnClassIT {
+class OptionsOnClassIT implements DefaultOptionsSet {
 
   @MavenTest
   void option_debug(MavenExecutionResult result) {

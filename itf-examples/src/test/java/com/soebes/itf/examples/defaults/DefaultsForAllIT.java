@@ -19,6 +19,7 @@ package com.soebes.itf.examples.defaults;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 
@@ -26,7 +27,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 
 @MavenJupiterExtensionWithDefaults
-class DefaultsForAllIT {
+class DefaultsForAllIT implements DefaultOptionsSet {
 
   @MavenTest
   void option_debug(MavenExecutionResult result) {

@@ -19,6 +19,7 @@ package com.soebes.itf.examples.profiles;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
@@ -27,7 +28,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @ProfilesOneTwoAndThree
-class MetaAnnotationProfileIT {
+class MetaAnnotationProfileIT implements DefaultOptionsSet {
 
   @MavenTest
   void profile_1_2_3(MavenExecutionResult result) {

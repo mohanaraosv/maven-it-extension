@@ -28,7 +28,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @Disabled("Currently disabled based on MEAR-566")
-class SixthIT {
+class SixthIT implements DefaultOptionsSet {
 
   @MavenTest
   void basic(MavenExecutionResult result) {

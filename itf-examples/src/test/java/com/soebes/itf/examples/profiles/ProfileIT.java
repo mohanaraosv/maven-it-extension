@@ -19,6 +19,7 @@ package com.soebes.itf.examples.profiles;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenProfile;
 import com.soebes.itf.jupiter.extension.MavenTest;
@@ -27,7 +28,7 @@ import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
-class ProfileIT {
+class ProfileIT implements DefaultOptionsSet {
 
   @MavenTest
   void no_profile_at_all(MavenExecutionResult result) {

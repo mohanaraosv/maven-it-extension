@@ -25,7 +25,7 @@ import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 import org.junit.jupiter.api.Nested;
 
 @MavenJupiterExtension
-class MavenIntegrationExampleNestedIT {
+class MavenIntegrationExampleNestedIT implements DefaultOptionsSet {
 
   @MavenTest
   void packaging_includes(MavenExecutionResult result) {

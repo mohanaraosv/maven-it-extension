@@ -35,7 +35,7 @@ import org.junit.jupiter.api.Nested;
  */
 @MavenJupiterExtension
 @MavenRepository
-class MavenIntegrationExampleNestedGlobalRepoIT {
+class MavenIntegrationExampleNestedGlobalRepoIT implements DefaultOptionsSet {
 
   @BeforeEach
   void beforeEachOne(MavenExecutionResult result) {

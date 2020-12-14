@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @MavenJupiterExtension
-class MavenProjectIT {
+class MavenProjectIT implements DefaultOptionsSet {
 
   @MavenTest
   void packaging_includes(MavenExecutionResult result) {

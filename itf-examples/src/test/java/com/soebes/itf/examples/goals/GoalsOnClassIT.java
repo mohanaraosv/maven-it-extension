@@ -19,6 +19,7 @@ package com.soebes.itf.examples.goals;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenGoal;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
@@ -29,7 +30,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @MavenGoal("clean")
-class GoalsOnClassIT {
+class GoalsOnClassIT implements DefaultOptionsSet {
 
   @MavenTest
   @DisplayName("This will check the goal which is defined on the class.")

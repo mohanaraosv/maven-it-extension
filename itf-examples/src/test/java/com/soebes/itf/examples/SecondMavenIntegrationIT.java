@@ -38,7 +38,7 @@ import static com.soebes.itf.jupiter.extension.MavenVersion.M3_3_1;
 @MavenJupiterExtension
 @EnabledForMavenVersion({M3_0_5, M3_3_1})
 @Disabled
-class SecondMavenIntegrationIT {
+class SecondMavenIntegrationIT implements DefaultOptionsSet {
 
   @MavenTest
   @MavenProfile("run-its")

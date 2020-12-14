@@ -26,7 +26,7 @@ import com.soebes.itf.jupiter.maven.MavenExecutionResult;
 import org.junit.jupiter.api.Nested;
 
 @MavenJupiterExtension
-class MavenIntegrationExampleNestedWithoutNoneNestedTestGlobalRepoIT {
+class MavenIntegrationExampleNestedWithoutNoneNestedTestGlobalRepoIT implements DefaultOptionsSet {
 
   @MavenRepository
   @Nested

@@ -31,7 +31,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
  * @author Karl Heinz Marbaise
  */
 @MavenJupiterExtension
-class ProjectSecondIT {
+class ProjectSecondIT implements DefaultOptionsSet {
 
   @MavenDebug
   @MavenTest

@@ -19,6 +19,7 @@ package com.soebes.itf.examples.profiles.packagewide;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
 import com.soebes.itf.jupiter.maven.MavenExecutionResult;
@@ -28,7 +29,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
 @Disabled("Currently the annotation can not be read from package level.")
-class ProfileOnPackageIT {
+class ProfileOnPackageIT implements DefaultOptionsSet {
 
   @MavenTest
   void profile_1_2_3(MavenExecutionResult result) {

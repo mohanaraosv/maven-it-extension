@@ -42,7 +42,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 @MavenRepository
 @TestMethodOrder(OrderAnnotation.class)
 @DisplayName("This is integration test Nr.1 with two setup projects.")
-class MavenIntegrationIT {
+class MavenIntegrationIT implements DefaultOptionsSet {
 
   @MavenTest
   @Order(10)

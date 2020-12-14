@@ -19,6 +19,7 @@ package com.soebes.itf.examples.options;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenCLIOptions;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenOption;
@@ -31,7 +32,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 import static com.soebes.itf.jupiter.extension.MavenCLIOptions.LOG_FILE;
@@ -39,7 +39,7 @@ import static com.soebes.itf.jupiter.extension.MavenCLIOptions.QUIET;
 import static com.soebes.itf.jupiter.extension.MavenCLIOptions.SHOW_VERSION;
 
 @MavenJupiterExtension
-class OptionsIT {
+class OptionsIT implements DefaultOptionsSet {
 
   @MavenTest
   void no_options_at_all(MavenExecutionResult result) {

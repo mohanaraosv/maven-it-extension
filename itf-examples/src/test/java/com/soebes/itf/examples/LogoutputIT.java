@@ -39,7 +39,7 @@ import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
  */
 @MavenJupiterExtension
 @MavenDebug
-class LogoutputIT {
+class LogoutputIT implements DefaultOptionsSet {
 
   @MavenTest
   @EnabledOnOs({OS.MAC, OS.LINUX})

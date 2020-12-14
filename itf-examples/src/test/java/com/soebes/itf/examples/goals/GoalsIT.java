@@ -19,6 +19,7 @@ package com.soebes.itf.examples.goals;
  * under the License.
  */
 
+import com.soebes.itf.examples.DefaultOptionsSet;
 import com.soebes.itf.jupiter.extension.MavenGoal;
 import com.soebes.itf.jupiter.extension.MavenJupiterExtension;
 import com.soebes.itf.jupiter.extension.MavenTest;
@@ -28,7 +29,7 @@ import org.junit.jupiter.api.DisplayName;
 import static com.soebes.itf.extension.assertj.MavenITAssertions.assertThat;
 
 @MavenJupiterExtension
-class GoalsIT {
+class GoalsIT implements DefaultOptionsSet {
 
   @MavenTest
   @DisplayName("This test checks that the default goal:package is used if no MavenGoal is defined at all.")

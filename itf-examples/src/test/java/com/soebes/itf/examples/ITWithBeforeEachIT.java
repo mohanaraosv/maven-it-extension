@@ -26,7 +26,7 @@ import com.soebes.itf.jupiter.maven.MavenExecutor;
 import org.junit.jupiter.api.BeforeEach;
 
 @MavenJupiterExtension
-class ITWithBeforeEachIT {
+class ITWithBeforeEachIT implements DefaultOptionsSet {
 
   @BeforeEach
   void beforeEach(MavenExecutor executor) {
