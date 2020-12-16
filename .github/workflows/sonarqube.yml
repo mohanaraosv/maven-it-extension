@@ -37,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-maven-sonar-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-sonar
       - name: 'Analyze'
-        run: mvn -V --no-transfer-progress clean install sonar:sonar --fail-never
+        run: mvn -V --no-transfer-progress clean verify sonar:sonar --fail-never
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
