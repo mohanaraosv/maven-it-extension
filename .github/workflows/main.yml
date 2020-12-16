@@ -35,7 +35,7 @@ jobs:
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-ubuntu-latest-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven-ubuntu-latest
+          restore-keys: ${{ runner.os }}-maven-ubuntu-latest-${{ hashFiles('**/pom.xml') }}
       - name: 'Build'
         run: mvn -V --no-transfer-progress clean verify --fail-at-end
   windows:
@@ -47,7 +47,7 @@ jobs:
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-windows-latest-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven-windows-latest
+          restore-keys: ${{ runner.os }}-maven-windows-latest-${{ hashFiles('**/pom.xml') }}
       - name: 'Set up JDK 8'
         uses: actions/setup-java@v1
         with:
@@ -64,7 +64,7 @@ jobs:
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-macos-latest-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven-macos-latest
+          restore-keys: ${{ runner.os }}-maven-macos-latest-${{ hashFiles('**/pom.xml') }}
       - name: 'Set up JDK 8'
         uses: actions/setup-java@v1
         with:
