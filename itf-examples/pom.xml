@@ -134,6 +134,7 @@
             <phase>pre-integration-test</phase>
             <goals>
               <goal>install</goal>
+              <goal>resources</goal>
             </goals>
           </execution>
         </executions>
