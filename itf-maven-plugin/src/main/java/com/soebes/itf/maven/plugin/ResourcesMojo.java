@@ -230,6 +230,7 @@ public class ResourcesMojo
      * @since 3.0.0
      */
     @Parameter( defaultValue = "true" )
+    //FIXME: Change this!!!
     protected boolean addDefaultExcludes;
 
     /**
@@ -314,6 +315,7 @@ public class ResourcesMojo
             mavenResourcesExecution.setAdditionalProperties( null );
 
             // if these are NOT set, just use the defaults, which are '${*}' and '@'.
+            //FIXME: use only `@project.version@`...
             mavenResourcesExecution.setDelimiters( delimiters, useDefaultDelimiters );
 
             mavenResourcesExecution.setPropertiesEncoding( propertiesEncoding );
